@@ -1,0 +1,73 @@
+#Langchain dependencies
+langchain
+langchain-core
+langchain-community
+
+#OpenAI integration
+langchain-openai
+openai
+
+#Google Gemini integration
+langchain-google-genai
+google-generativeai
+
+#Hugging Face integration
+langchain-huggingface
+transformers
+huggingface-hub
+
+#Backend server
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+python-dotenv
+python-multipart
+orjson
+httpx
+
+#Database and ODM
+motor
+beanie
+pymongo
+
+#Authentication
+passlib[bcrypt]
+pytest
+python-jose[cryptography]
+
+fastapi_scheduler
+
+#Maching learning utilities
+numpy
+
+#Web scraping and document processing
+streamlit
+pypdf
+
+#Vector stores and embeddings
+chromadb
+tiktoken
+langchain-chroma
+wikipedia
+faiss-cpu
+pinecone-client
+
+# ===============================
+# Cache & Queue
+# ===============================
+redis
+
+
+# ===============================
+# Real-time Communication
+# ===============================
+websockets
+fastapi-socketio
+
+
+# ===============================
+# Async / Performance
+# ===============================
+asyncio
+aiofiles
