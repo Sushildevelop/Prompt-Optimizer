@@ -1,6 +1,7 @@
 from motor.motor_asyncio import AsyncIOMotorClient
 from beanie import init_beanie
 from app.core.config import settings
+from app.models.prompt import PromptOptimization
 
 
 import asyncio
@@ -22,7 +23,7 @@ async def connect_to_mongo():
     # Initialize Beanie with the models
     await init_beanie(
         database=database.database,
-        document_models=[])
+        document_models=[PromptOptimization])
 
 
 async def close_mongo_connection():
