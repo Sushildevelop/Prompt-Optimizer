@@ -20,8 +20,8 @@ class Settings(BaseSettings):
     redis_url: str = "redis://localhost:6379/0"
 
     
-    openai_api_key: str
-    atlas_connection_string: str
+    # openai_api_key: str
+    # atlas_connection_string: str
 
 
 

@@ -25,6 +25,7 @@ python-dotenv
 python-multipart
 orjson
 httpx
+loguru
 
 #Database and ODM
 motor
