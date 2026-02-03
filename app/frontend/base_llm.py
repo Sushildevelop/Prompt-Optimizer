@@ -7,7 +7,7 @@ from app.core.config import settings
 def generate_llm_response(user_message: str) -> str:
     """
     Acts like ChatGPT / Gemini chat.
-    Returns RAW model output.
+    Returns RAW model outputs.
     """
 
     llm = ChatGoogleGenerativeAI(
