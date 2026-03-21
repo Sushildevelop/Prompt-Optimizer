@@ -9,10 +9,15 @@ def optimize_raw_prompt(raw_text: str) -> dict:
     """
     Sends raw model output to Prompt Optimizer backend.
     """
+    payload = {
+        "prompt": raw_text,
+        "provider": "groq"  # You can make this configurable later
+    }
+
     response = requests.post(
         OPTIMIZER_URL,
-        data=raw_text.encode("utf-8"),
-        headers={"Content-Type": "text/plain"},
+        json=payload,  # Send as JSON instead of raw text
+        headers={"Content-Type": "application/json"},
         timeout=60
     )
 

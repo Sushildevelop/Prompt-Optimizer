@@ -11,6 +11,9 @@ openai
 langchain-google-genai
 google-generativeai
 
+#Groq integration
+langchain-groq
+
 #Hugging Face integration
 langchain-huggingface
 transformers
@@ -72,3 +75,6 @@ fastapi-socketio
 # ===============================
 asyncio
 aiofiles
+
+#Groq
+langchain-groq

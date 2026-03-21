@@ -1,10 +1,11 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_groq import ChatGroq
 # Future providers (keep commented for now)
 # from langchain_openai import ChatOpenAI
 # from langchain_anthropic import ChatAnthropic
 from app.core.config import settings
 
-def get_llm(provider: str = "gemini"):
+def get_llm(provider: str = "groq"):
     """
     LLM factory method.
     Default provider: Gemini
@@ -12,13 +13,13 @@ def get_llm(provider: str = "gemini"):
 
     provider = provider.lower()
 
-    if provider == "gemini":
-        return ChatGoogleGenerativeAI(
-            google_api_key=settings.GEMINI_API_KEY,
-            model=settings.GEMINI_MODEL,
-            temperature=0.3,
-            convert_system_message_to_human=True
+    if provider == "groq":
+        return ChatGroq(
+            groq_api_key=settings.GROQ_API_KEY,
+            model=settings.GROQ_MODEL,
+            temperature=0.6
         )
+        
 
     # ---- Future Providers ----
     # elif provider == "openai":

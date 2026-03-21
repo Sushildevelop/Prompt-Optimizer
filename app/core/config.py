@@ -25,7 +25,10 @@ class Settings(BaseSettings):
 
     GEMINI_API_KEY: str 
     GEMINI_MODEL:str
-    CLAUDE_API_KEY: Optional[str] 
+    CLAUDE_API_KEY: Optional[str]
+    GROQ_MODEL: Optional[str]
+    GROQ_API_KEY: Optional[str]
+     
 
 
 

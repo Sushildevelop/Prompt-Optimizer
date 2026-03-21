@@ -4,7 +4,7 @@ from typing import List
 
 class PromptOptimizeCreate(BaseModel):
     prompt: str = Field(..., min_length=5)
-    provider: str = Field(default="openai")
+    provider: str = Field(default="groq")
 
 
 class OptimizedPromptResponse(BaseModel):

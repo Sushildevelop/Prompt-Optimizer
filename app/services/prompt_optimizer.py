@@ -2,6 +2,7 @@ from app.services.analyzer import PromptAnalyzerService
 from app.services.optimizer import PromptOptimizerService
 from app.services.llm_factory import get_llm
 from app.models.prompt import PromptOptimization
+from app.core.config import settings
 
 
 class PromptOptimizerFacadeService:
@@ -17,7 +18,10 @@ class PromptOptimizerFacadeService:
     ):
         # 1. Load LLM
         llm = get_llm(provider)
-        model_used = llm.model
+
+        # Get model name from settings based on provider
+        provider_upper = provider.upper()
+        model_used = getattr(settings, f"{provider_upper}_MODEL", f"{provider}_default_model")
         provider_used = provider.lower()
 
         # 2. Analyze prompt
